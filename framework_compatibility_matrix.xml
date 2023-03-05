@@ -437,9 +437,9 @@
     </hal>
 	<hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.biometrics.fingerprint</name>
-        <version>2.1</version>
+        <version>3.0</version>
         <interface>
-            <name>ISecBiometricsFingerprint</name>
+            <name>ISehBiometricsFingerprint</name>
             <instance>default</instance>
         </interface>
     </hal>
