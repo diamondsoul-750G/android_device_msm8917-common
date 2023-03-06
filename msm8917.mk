@@ -193,6 +193,12 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebt
     
+# FM
+PRODUCT_PACKAGES += \
+    FM2 \
+    libqcomfm_jni \
+    qcom.fmradio
+    
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:32 \
@@ -261,16 +267,6 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_PACKAGES += \
 #    android.hardware.keymaster@3.0-impl \
 #    android.hardware.keymaster@3.0-service
-
-# FMRadio deps
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/FMRadio/privapp_whitelist_com.caf.fmradio.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp_whitelist_com.caf.fmradio.xml \
-    $(LOCAL_PATH)/FMRadio/qcom.fmradio.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qcom.fmradio.xml \
-    $(LOCAL_PATH)/FMRadio/libqcomfm_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libqcomfm_jni.so \
-    $(LOCAL_PATH)/FMRadio/qcom.fmradio.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/qcom.fmradio.jar
-
-# FMRadio app
-PRODUCT_PACKAGES += FM2Prebuilt
 
 # Low power Whitelist
 PRODUCT_COPY_FILES += \
