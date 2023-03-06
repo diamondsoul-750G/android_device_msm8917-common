@@ -503,5 +503,9 @@ PRODUCT_COPY_FILES += \
 # Inherit vendor
 $(call inherit-product, vendor/samsung/msm8917-common/msm8917-common-vendor.mk)
 
+# Prebuilt Packages
+PRODUCT_PACKAGES += \
+    SafetyNet
+
 # Debug
 $(call inherit-product, $(LOCAL_PATH)/debug-tools/debug.mk)
