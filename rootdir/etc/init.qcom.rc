@@ -260,10 +260,6 @@ on boot
     chown system radio /sys/class/fingerprint/fingerprint/vendor
     chown system radio /sys/class/fingerprint/fingerprint/adm
     chown system radio /sys/class/fingerprint/fingerprint/bfs_values
-    chown system radio /sys/class/fingerprint/fingerprint/hbm
-    chown system radio /sys/class/fingerprint/fingerprint/position
-    chown system radio /sys/class/fingerprint/fingerprint/intcnt
-    chown system radio /sys/class/fingerprint/fingerprint/resetcnt
 
     mkdir /data/vendor/fpSnrTest 0770 system system
     # Create directory used for display
@@ -457,12 +453,9 @@ on post-fs-data
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system system
 
-    #FINGERPRINT
+    # FINGERPRINT
     mkdir /data/vendor/biometrics 0770 system system
     mkdir /data/vendor/fpSnrTest 0770 system system
-    mkdir /efs/biometrics 0770 system system
-    mkdir /efs/biometrics/meta 0770 system system
-
 
     #Start move time data to /data/vendor once post-fs-data done
     start vendor.move_time_data
@@ -1201,7 +1194,7 @@ service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-servi
     user system
     group system input wakelock
     capabilities BLOCK_SUSPEND
-    rlimit rtprio 10 10   
+    rlimit rtprio 10 10
     
 # Start NFC on supported variants
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.1-service
@@ -1215,4 +1208,4 @@ on property:ro.boot.product.hardware.sku=NFC
     start vendor.nfc_hal_service    
     
 on property:sys.boot_from_charger_mode=1
-    class_stop charger     
+    class_stop charger    
