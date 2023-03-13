@@ -470,6 +470,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstdc++.vendor
 
+# libgui
+PRODUCT_PACKAGES += \ libgui.vendor
+   
 
 # Wifi
 PRODUCT_PACKAGES += \
