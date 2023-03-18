@@ -114,7 +114,8 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-service.msm8917 \
-    Snap
+    Snap \
+    camera.device@3.5-impl_shim
     
 # Charger
 PRODUCT_PACKAGES += \
