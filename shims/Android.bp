@@ -1,6 +1,6 @@
 cc_library {
    name: "camera.device@3.5-impl_shim",
-   shared_libs: ["libcutils", "android.hardware.camera.device@3.2"],
+   shared_libs: ["libcutils", "android.hardware.camera.device@3.2", "libfmq"],
    include_dirs: ["hardware/interfaces/camera/device/3.2/default"],
    srcs: ["shim.cpp"],
    vendor: true,
