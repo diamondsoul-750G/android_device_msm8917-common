@@ -1,6 +1,6 @@
 cc_library {
    name: "camera.device@3.5-impl_shim",
-   shared_libs: ["libcutils"],
+   shared_libs: ["libcutils", "camera.device@3.2-impl"],
    include_dirs: ["hardware/interfaces/camera/device/3.2/default"],
    srcs: ["shim.cpp"],
    vendor: true,
