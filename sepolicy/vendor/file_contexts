@@ -26,7 +26,6 @@
 /data/vendor/log(/.*)?               u:object_r:vendor_log_file:s0
 /data/vendor/log/audiopcm(/.*)?      u:object_r:vendor_audiopcm_data_file:s0
 /data/vendor/secure_storage(/.*)?    u:object_r:secure_storage_vendor_data_file:s0
-/data/system/users/[0-9]*/fpdata(/.*)?		u:object_r:fingerprintd_data_file:s0
 
 # Devices
 /dev/\.pa(/.*)?                u:object_r:pa_daemon_device:s0
@@ -44,7 +43,6 @@
 /dev/sdp_mm                    u:object_r:knox_dar_device:s0
 /dev/secdp_aux                 u:object_r:secdp_aux_device:s0
 /dev/tzic                      u:object_r:tz_device:s0
-/sys/class/fingerprint/fingerprint(/.*)?		u:object_r:sysfs_fpc:s0
 
 # DRM
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service.widevine                     u:object_r:hal_drm_widevine_exec:s0
@@ -122,7 +120,6 @@
 /(vendor|system/vendor)/bin/vendor\.samsung\.security\.sem@1\.0-service                            u:object_r:hal_sem_default_exec:s0
 /(vendor|system/vendor)/bin/vendor\.samsung\.security\.skpm@1\.0-service                           u:object_r:hal_skpm_default_exec:s0
 /(vendor|system/vendor)/bin/vendor\.samsung\.security\.wvkprov_server@1\.0-service                 u:object_r:hal_wvkprov_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.biometrics\.fingerprint@2\.1-service		u:object_r:hal_fingerprint_default_exec:s0
 
 # Rootfs
 /firmware(/.*)?    u:object_r:firmware_file:s0

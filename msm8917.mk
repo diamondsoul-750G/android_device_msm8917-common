@@ -114,8 +114,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-service.msm8917 \
-    Snap \
-    camera.device@3.5-impl_shim
+    Snap 
     
 # Charger
 PRODUCT_PACKAGES += \
@@ -472,9 +471,6 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libstdc++.vendor
-
-# libgui
-PRODUCT_PACKAGES += \ libgui.vendor
    
 
 # Wifi
@@ -505,9 +501,6 @@ PRODUCT_COPY_FILES += \
 # Inherit vendor
 $(call inherit-product, vendor/samsung/msm8917-common/msm8917-common-vendor.mk)
 
-# Prebuilt Packages
-PRODUCT_PACKAGES += \
-    SafetyNet
 
 # Debug
 $(call inherit-product, $(LOCAL_PATH)/debug-tools/debug.mk)
