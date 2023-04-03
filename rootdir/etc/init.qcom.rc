@@ -964,12 +964,10 @@ service can /vendor/bin/init.qti.can.sh
    disabled
    oneshot
 
-service charger /system/bin/charger
+service charger /charger
     class charger
-    user system
-    group system graphics input
-    capabilities SYS_BOOT
-    seclabel u:r:charger:s0
+    group system graphics
+    seclabel u:r:healthd:s0
 
 service vendor.ssr_diag /system/vendor/bin/ssr_diag
     class late_start
@@ -1076,7 +1074,8 @@ service esepmdaemon /system/vendor/bin/esepmdaemon
     group nfc
 
 on charger
-    class_start charger
+    setprop persist.sys.usb.config mass_storage
+    load_system_props
     start qcom-post-boot
 
 #add poweroffhandler
@@ -1196,7 +1195,8 @@ service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-servi
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10
     
-# Start NFC on supported variants
+ 
+    # Start NFC on supported variants
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.1-service
     override
     class hal
@@ -1209,3 +1209,4 @@ on property:ro.boot.product.hardware.sku=NFC
     
 on property:sys.boot_from_charger_mode=1
     class_stop charger    
+
