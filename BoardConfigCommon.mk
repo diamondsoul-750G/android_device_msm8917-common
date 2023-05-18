@@ -13,13 +13,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # Qcom Hardware
-OVERRIDE_QCOM_HARDWARE_VARIANT := msm8996-los
+
+#OVERRIDE_QCOM_HARDWARE_VARIANT := msm8996-los
 
 COMMON_PATH := device/samsung/msm8917-common
 BOARD_VENDOR := samsung
 
 BUILD_BROKEN_DUP_RULES := true
 TARGET_KERNEL_CLANG_COMPILE := false
+
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 
